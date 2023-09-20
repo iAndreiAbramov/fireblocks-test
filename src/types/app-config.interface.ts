@@ -4,5 +4,5 @@ export interface IAppConfig {
   port: number;
   mode: TAppMode;
   apiKey: string;
-  secretKey: string;
+  apiSecret: string;
 }

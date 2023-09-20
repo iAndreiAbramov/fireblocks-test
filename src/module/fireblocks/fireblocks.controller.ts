@@ -5,8 +5,8 @@ import { FireblocksService } from '@src/module/fireblocks/fireblocks.service';
 export class FireblocksController {
   constructor(private readonly fireblocksService: FireblocksService) {}
 
-  @Get('/something')
-  private async getSomething() {
-    return await this.fireblocksService.getSometing();
+  @Get('/vault-accounts')
+  private async getVaultAccounts() {
+    return this.fireblocksService.getVaultAccounts();
   }
 }

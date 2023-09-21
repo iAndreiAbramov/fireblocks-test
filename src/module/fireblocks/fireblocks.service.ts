@@ -28,4 +28,20 @@ export class FireblocksService {
       throw new InternalServerErrorException(error.message);
     }
   }
+
+  public async createVaultAccount(name: string) {
+    try {
+      return await this.fireblocksSDK.createVaultAccount(name);
+    } catch (error) {
+      return new InternalServerErrorException(error.message);
+    }
+  }
+
+  public async hideVaultAccount(id: string) {
+    try {
+      return await this.fireblocksSDK.hideVaultAccount(id);
+    } catch (error) {
+      return new InternalServerErrorException(error.message);
+    }
+  }
 }

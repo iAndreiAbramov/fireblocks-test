@@ -22,6 +22,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@fireblocks/fireblocks-web3-provider": "^1.2.4",
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^9.0.0",

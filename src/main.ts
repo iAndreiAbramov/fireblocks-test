@@ -9,9 +9,11 @@ async function bootstrap() {
 
   const appConfig = app.get(ConfigService);
   const port = appConfig.getOrThrow('app.port');
+  const mode = appConfig.getOrThrow('app.mode');
 
   await app.listen(port);
   Logger.log(`🚀 Application is running on: http://localhost/v1:${port}`);
+  Logger.log(`✌️  Application is running in ${mode} mode`);
 }
 
 void bootstrap();

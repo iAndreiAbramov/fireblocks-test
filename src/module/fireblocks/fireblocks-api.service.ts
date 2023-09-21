@@ -7,7 +7,7 @@ import {
 import { FireblocksSDK } from 'fireblocks-sdk';
 
 @Injectable()
-export class FireblocksService {
+export class FireblocksApiService {
   private readonly baseUrl: string;
   private readonly apiKey: string;
   private readonly apiSecret: string;

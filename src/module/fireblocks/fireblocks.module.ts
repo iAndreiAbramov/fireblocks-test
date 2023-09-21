@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { FireblocksService } from '@src/module/fireblocks/fireblocks.service';
+import { FireblocksApiService } from '@src/module/fireblocks/fireblocks-api.service';
 import { FireblocksController } from '@src/module/fireblocks/fireblocks.controller';
 
 @Module({
   controllers: [FireblocksController],
-  providers: [FireblocksService],
+  providers: [FireblocksApiService],
   exports: [],
 })
 export class FireblocksModule {}

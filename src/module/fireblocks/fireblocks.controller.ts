@@ -1,11 +1,11 @@
 import { Controller, Delete, Get, Post, Query } from '@nestjs/common';
-import { FireblocksService } from '@src/module/fireblocks/fireblocks.service';
+import { FireblocksApiService } from '@src/module/fireblocks/fireblocks-api.service';
 import { CreateVaultAccountDto } from '@src/module/fireblocks/dto/create-vault-account.dto';
 import { HideVaultAccountDto } from '@src/module/fireblocks/dto/hide-vault-account.dto';
 
 @Controller('/fireblocks')
 export class FireblocksController {
-  constructor(private readonly fireblocksService: FireblocksService) {}
+  constructor(private readonly fireblocksService: FireblocksApiService) {}
 
   @Get('/vault-accounts')
   private async getVaultAccounts() {

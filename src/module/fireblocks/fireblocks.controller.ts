@@ -30,4 +30,9 @@ export class FireblocksController {
   private async getAllowance() {
     return await this.fireblocksWeb3Service.getBtcmtAllowance();
   }
+
+  @Post('allowance/approve')
+  private async approveAllowance() {
+    return await this.fireblocksWeb3Service.approveBtcmtAllownce();
+  }
 }

@@ -26,13 +26,33 @@ export class FireblocksController {
     return this.fireblocksApiService.hideVaultAccount(query.id);
   }
 
-  @Get('allowance/get')
+  @Get('btcmt/get-allowance')
   private async getAllowance() {
     return await this.fireblocksWeb3Service.getBtcmtAllowance();
   }
 
-  @Post('allowance/approve')
-  private async approveAllowance() {
-    return await this.fireblocksWeb3Service.approveBtcmtAllownce();
+  @Post('btcmt/approve-allowance')
+  private async approveBtcmt() {
+    return await this.fireblocksWeb3Service.approveBtcmtAllowance();
+  }
+
+  @Post('btcmt/buy')
+  private async buyBtcmt() {
+    return await this.fireblocksWeb3Service.purchaseBtcmt();
+  }
+
+  @Post('btcmt/stake')
+  private async stakeBtcmt() {
+    return await this.fireblocksWeb3Service.stakeBtcmt();
+  }
+
+  @Post('btcmt/withdraw')
+  private async withdrawBtcmt() {
+    return await this.fireblocksWeb3Service.withdrawBtcmt();
+  }
+
+  @Post('usdt/approve-allowance')
+  private async approveUsdt() {
+    return await this.fireblocksWeb3Service.approveUsdtAllowance();
   }
 }
